@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Main {
     static double amountIncome;
     static double amountTax;
-
     static double incomeRateMin;
     static double incomeRateMax;
     static double taxRateMin;
@@ -28,9 +27,18 @@ public class Main {
         amountIncome = scannerIncome.nextDouble();
         scannerIncome.nextLine();
 
-//        amountTax = amountIncome * taxRateMax / 100;
+        if (amountIncome < incomeRateMin) {
+            amountTax = amountIncome * taxRateMin / 100;
+            System.out.printf("The tax amount is: %.2f \n", amountTax);
+        } else if (amountIncome > incomeRateMin & amountIncome < incomeRateMax) {
+            amountTax = amountIncome * taxRateMiddle / 100;
+            System.out.printf("The tax amount is: %.2f \n", amountTax);
+        } else {
+            amountTax = amountIncome * taxRateMax / 100;
+            System.out.printf("The tax amount is: %.2f \n", amountTax);
+        }
 
-//        System.out.println("the tax amount is:" + amountTax);
+        scannerIncome.close();
 
     }
 }
