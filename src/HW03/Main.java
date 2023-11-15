@@ -14,8 +14,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        incomeRateMin = 10000;
-        incomeRateMax = 25000;
+        incomeRateMin = 10000.00;
+        incomeRateMax = 25000.00;
         taxRateMin = 2.5;
         taxRateMiddle = 4.3;
         taxRateMax = 6.7;
@@ -39,6 +39,5 @@ public class Main {
         }
 
         scannerIncome.close();
-
     }
 }
