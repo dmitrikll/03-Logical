@@ -27,10 +27,10 @@ public class Main {
         amountIncome = scannerIncome.nextDouble();
         scannerIncome.nextLine();
 
-        if (amountIncome < incomeRateMin) {
+        if (amountIncome <= incomeRateMin) {
             amountTax = amountIncome * taxRateMin / 100;
             System.out.printf("The tax amount is: %.2f \n", amountTax);
-        } else if (amountIncome > incomeRateMin & amountIncome < incomeRateMax) {
+        } else if (amountIncome > incomeRateMin & amountIncome <= incomeRateMax) {
             amountTax = amountIncome * taxRateMiddle / 100;
             System.out.printf("The tax amount is: %.2f \n", amountTax);
         } else {
